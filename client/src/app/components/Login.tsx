@@ -53,31 +53,13 @@ const Login = () => {
     <div
       className={`${pageReady ? "block" : "hidden"} grid grid-cols-[1fr,30%]`}
     >
-      <div className="h-screen grid place-items-center">
-        <div className="text-center">
-          <h1 className="text-accent font-bold text-4xl">
-            Login to Your Account
-          </h1>
-          <div className="flex items-center gap-4 pt-8 w-fit mx-auto">
-            <div className="icon__wrapper">
-              <FaFacebookF />
-            </div>
-            <div className="icon__wrapper">
-              <FaGoogle />
-            </div>
-            <div className="icon__wrapper">
-              <FaInstagram />
-            </div>
-          </div>
+      <div>
+        <div>
+          <h1>Login to Your Account</h1>
 
-          <p className="pt-8 text-[13px] text-gray-400">
-            Or use your email account for registration.
-          </p>
+          <p>Or use your email account for registration.</p>
 
-          <form
-            className="flex w-[300px] mx-auto flex-col pt-2 gap-2"
-            onSubmit={handleSubmit}
-          >
+          <form onSubmit={handleSubmit}>
             <input
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -97,17 +79,15 @@ const Login = () => {
 
             <p>Forgot your password?</p>
 
-            <button className="uppercase bg-accent px-4 py-2 text-white mt-4">
-              Login
-            </button>
+            <button>Login</button>
           </form>
         </div>
       </div>
 
-      <div className="bg-accent h-screen grid place-items-center">
-        <div className="text-center w-full text-white space-y-8">
-          <h2 className="font-bold text-4xl">Hello Friend!</h2>
-          <div className="text-[#eeeeee] w-fit mx-auto">
+      <div>
+        <div>
+          <h2>Hello Friend!</h2>
+          <div>
             <p>Enter your personal details</p>
             <p>and start your journey with us</p>
 

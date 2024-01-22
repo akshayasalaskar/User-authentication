@@ -58,9 +58,9 @@ const SignUp = () => {
       <div
         className={`${pageReady ? "block" : "hidden"} grid grid-cols-[30%,1fr]`}
       >
-        <div className="bg-accent h-screen grid place-items-center">
-          <div className="text-center w-full text-white space-y-8">
-            <h2 className="font-bold text-4xl">Welcome Back!</h2>
+        <div>
+          <div>
+            <h2>Welcome Back!</h2>
             <div className="text-[#eeeeee] w-fit mx-auto">
               <p>To keep connected with us please</p>
               <p>please login with your personal info</p>
@@ -74,29 +74,15 @@ const SignUp = () => {
           </div>
         </div>
 
-        <div className="h-screen grid place-items-center">
-          <div className="text-center">
-            <h1 className="text-accent font-bold text-4xl">Create Account</h1>
-            <div className="flex items-center gap-4 pt-8 w-fit mx-auto">
-              <div className="icon__wrapper">
-                <FaFacebookF />
-              </div>
-              <div className="icon__wrapper">
-                <FaGoogle />
-              </div>
-              <div className="icon__wrapper">
-                <FaInstagram />
-              </div>
-            </div>
+        <div>
+          <div>
+            <h1>Create Account</h1>
 
             <p className="pt-8 text-[13px] text-gray-400">
               Or use your email account for registration.
             </p>
 
-            <form
-              className="flex w-[300px] mx-auto flex-col pt-2 gap-2"
-              onSubmit={handleSubmit}
-            >
+            <form onSubmit={handleSubmit}>
               <input
                 value={name}
                 onChange={(e) => setName(e.target.value)}
