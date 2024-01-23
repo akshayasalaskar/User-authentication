@@ -34,12 +34,10 @@ const Login = () => {
       email,
       password,
     };
-
     axios
       .post(`${baseURL}/login`, payload)
       .then((res) => {
         console.log(res.data);
-
         setAuthentication(res.data.token);
         toast.success("Login Successful");
         router.push("/");

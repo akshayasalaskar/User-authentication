@@ -31,13 +31,11 @@ const SignUp = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
     const payload = {
       name,
       email,
       password,
     };
-
     axios
       .post(`${baseURL}/signup`, payload)
       .then((res) => {
@@ -73,7 +71,6 @@ const SignUp = () => {
             </div>
           </div>
         </div>
-
         <div>
           <div>
             <h1>Create Account</h1>
