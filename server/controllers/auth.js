@@ -3,16 +3,17 @@
 
 const jwt = require("jsonwebtoken");
 module.exports = (req, res) => {
+  //This assumes that the req.body object has a property named token.
   const { token } = req.body;
 
   if (token) {
     try {
+      // token , secret key
       const decode = jwt.verify(token, process.env.JWT_LOGIN_TOKEN);
       res.json({
         auth: true,
-        data: decode,
+        data: decode, // in data user id, username, email is there
       });
-
       console.log("Try block executed successfully");
     } catch (error) {
       res.json({
